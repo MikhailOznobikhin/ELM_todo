@@ -1,11 +1,9 @@
---вынес запросы в отдельный модуль ибо его нужно вызывать в todos 
---которые вызываются в мэйне и получалось зацикливание вызовово
+--запросы в отельном модуле который вызывается в todos 
 module Utils exposing (RecordWithId, delete, mergeById, patchJson, postJson, removeById)
 
 import Http
 import Json.Decode
 import Json.Encode
-import Task
 
 type alias RecordWithId a = { a | id : Int }
 

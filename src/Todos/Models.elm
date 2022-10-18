@@ -8,14 +8,9 @@ import Task
 import Utils
 --edit
 import Html exposing (..)
-import Html.Attributes exposing (placeholder, value)
-import Html.Events exposing (onClick, onInput)
 --list
-import Html exposing (..)
-import Html.Attributes exposing (style)
 import Html.Events exposing (onClick)
 --bootstrap
-import Bootstrap.CDN as CDN
 import Bootstrap.Grid as Grid
 import Bootstrap.Button as Button
 import Bootstrap.Form.Input as Input
@@ -205,7 +200,7 @@ todoRow t =
                     [ Button.button[ Button.success, Button.attrs [ onClick <| buttonMsg t ]][text buttonText] ]
                 , Grid.col
                     [ Col.xs4 ]
-                    [ Button.button[ Button.info, Button.attrs [ onClick <| ShowEditView <| Editing t  ]][text "Редактирвоать"]]
+                    [ Button.button[ Button.info, Button.attrs [ onClick <| ShowEditView <| Editing t  ]][text "Редактировать"]]
                 , Grid.col
                     [ Col.xs4 ]
                     [  Button.button[ Button.warning, Button.attrs [ onClick <| Delete t ]][text "Удалить"]]
